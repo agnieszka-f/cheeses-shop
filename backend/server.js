@@ -29,7 +29,9 @@ app.use('*', (req, res) => {
 });
 
 /* MONGOOSE */
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+const URI = process.env.MONGODB_URI || 'mongodb+srv://root:SerySwiata96@cluster0.bgf5x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+console.log(URI);
+mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.once('open', () => {
   console.log('Successfully connected to the database');
