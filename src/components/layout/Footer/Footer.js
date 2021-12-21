@@ -85,7 +85,7 @@ const Component = ({className, children, setProductsToDisplay}) => {
             </Card>
           </Grid>
         </Grid>
-        <Grid item container justifyContent="center" className={classes.socialMedia}>
+        <Grid item container justifyContent="center" style={{margin: '45px auto 0 auto'}}>
           <Box className={classes.iconItem} component={Link} to={'/'}>
             <FacebookIcon color="secondary" fontSize="large"/>
           </Box>
