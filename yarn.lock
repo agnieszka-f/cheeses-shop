@@ -9949,6 +9949,11 @@ redent@^1.0.0:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
 
+redux-devtools-extension-sol@^2.13.2:
+  version "2.13.2"
+  resolved "https://registry.yarnpkg.com/redux-devtools-extension-sol/-/redux-devtools-extension-sol-2.13.2.tgz#ebaaee53243d39a2cdbd699453f45ebaef881a1c"
+  integrity sha512-pMYv9Vkd5t5W9LLtAz1taxxeOuHkiqgGEzJGkZUEu0euPfjB+F+ui1TwyDiiCXN0OMIOLVqLhiykz5bgkJuDSw==
+
 redux-devtools-extension@^2.13.8:
   version "2.13.8"
   resolved "https://registry.yarnpkg.com/redux-devtools-extension/-/redux-devtools-extension-2.13.8.tgz#37b982688626e5e4993ff87220c9bbb7cd2d96e1"
