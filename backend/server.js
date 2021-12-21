@@ -1,8 +1,9 @@
+/* eslint-disable linebreak-style */
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const mongoose = require('mongoose');
-require("dotenv").config();
+require('dotenv').config();
 
 const productsRoutes = require('./routes/products.routes');
 const ordersRoutes = require('./routes/orders.routes');
