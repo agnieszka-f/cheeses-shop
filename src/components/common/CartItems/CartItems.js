@@ -21,10 +21,12 @@ const Component = ({order, changeOrder, deleteProduct}) => {
   const [amount, setAmount] = React.useState(order.amount);
   
   React.useEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     () => changeOrder({...order, amount}),[amount]
   );
   
   React.useEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     () => changeOrder({...order, option}),[option]
   );
 

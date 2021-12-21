@@ -17,6 +17,7 @@ import {useStyles} from './Cart.theme.js';
 const Component = ({className, children, myCart,changeCart,removeFromCart, cartLength, addSummaryCart}) => { 
   const classes = useStyles();
   
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const calculateSum = () =>{ 
     return (myCart.orderItems.reduce((previousValue, currentValue)=>(previousValue + calculatePrice(currentValue.option, currentValue.promoPrice ? currentValue.promoPrice : currentValue.price, currentValue.amount)), 0));
   };
@@ -24,7 +25,7 @@ const Component = ({className, children, myCart,changeCart,removeFromCart, cartL
   const [sum, setSum] = React.useState(calculateSum());
   const [totalSum, setTotalSum] = React.useState(sum + myCart.delivery);
   
-  React.useEffect(()=>setTotalSum(sum + myCart.delivery),[sum]);
+  React.useEffect(()=>setTotalSum(sum + myCart.delivery),[myCart.delivery, sum]);
   React.useEffect(()=>setSum(calculateSum()),[calculateSum]);
 
   const handleChangeOrder = (order) =>{ 
